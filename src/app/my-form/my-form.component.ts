@@ -10,8 +10,16 @@ import {
 
 @Component({
   selector: 'app-my-form',
+
   templateUrl: './my-form.component.html',
-  styleUrls: ['./my-form.component.css']
+
+  styles: [`
+      .errorMsg{
+        color: red;
+        font-size: 20px;
+      }
+  `]
+
 })
 
 export class MyFormComponent implements OnInit {
@@ -25,11 +33,14 @@ export class MyFormComponent implements OnInit {
     });
 
     this.myForm.statusChanges.subscribe((data) => console.log(data));
-
   }
 
   onSubmit() {
     console.log(this.myForm);
+  }
+
+  getData() {
+    console.log("try to get somet datas");
   }
 
   ngOnInit() {

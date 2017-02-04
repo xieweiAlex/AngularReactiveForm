@@ -6,6 +6,11 @@
            class="form-control"
            id="name"
            formControlName="name">
+
+    <div class="errorMsg"  *ngIf="!myForm.controls['name'].valid">
+      name is required
+    </div>
+
   </div>
   <div class="form-group">
     <label for="email">email</label>
@@ -13,6 +18,11 @@
            class="form-control"
            id="email"
            formControlName="email">
+
+    <div class="errorMsg" *ngIf="!myForm.controls['email'].valid">
+      email is required
+    </div>
+
   </div>
   <div class="form-group">
     <label for="post">post</label>
@@ -20,7 +30,14 @@
               class="form-control"
               id="post"
               formControlName="post"></textarea>
+
+    <div id="aaa" class="errorMsg"  *ngIf="!myForm.controls['post'].valid">
+      at least 10 characters
+    </div>
+
   </div>
+  <button type="button" class="btn btn-default" [disabled]="!myForm.valid">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="getData()">Get Data</button>
 
 </form>
 
