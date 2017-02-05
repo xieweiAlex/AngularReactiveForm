@@ -1,4 +1,4 @@
-<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="myForm">
 
   <div class="form-group">
     <label for="name">name</label>
@@ -36,7 +36,7 @@
     </div>
 
   </div>
-  <button type="button" class="btn btn-default" [disabled]="!myForm.valid">Submit</button>
+  <button type="button" class="btn btn-default" [disabled]="!myForm.valid" (click)="onSubmit()">Submit</button>
   <button type="submit" class="btn btn-primary" (click)="getData()">Get Data</button>
 
 </form>

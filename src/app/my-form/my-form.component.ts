@@ -3,7 +3,6 @@ import { Component, OnInit} from '@angular/core';
 import { FormGroup, Validators, FormBuilder} from "@angular/forms";
 import { MyHttpServiceService } from "../my-http-service.service";
 
-import { Http, Response, RequestOptions, Headers} from '@angular/http';
 import {Observable} from "rxjs";
 import 'rxjs/add/observable/forkJoin';
 import 'rxjs/add/operator/map';
@@ -38,6 +37,7 @@ export class MyFormComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log('something .... hahaha ');
     console.log(this.myForm);
   }
 
@@ -60,7 +60,5 @@ export class MyFormComponent implements OnInit {
 
   ngOnInit() {
   }
-
-
 
 }
